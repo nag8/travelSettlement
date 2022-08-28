@@ -9,6 +9,10 @@ class Debt{
     return this.creditor === creditor;
   }
 
+  isSamePerson(){
+    return this.debtor === this.creditor;
+  }
+
   getDebtor(){
     return this.debtor;
   }

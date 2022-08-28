@@ -9,6 +9,9 @@ function main(){
         row.properties.payer.people[0]?.name,
         row.properties.amount.number / row.properties.pay_for.people.length
       );
+
+      if(debt.isSamePerson()) return debtorList;
+
       let debtor = debtorList.find(debtor => debtor.isSameDebtor(debt));
       if(!debtor){
         debtorList.push(new Debtor(debt));
